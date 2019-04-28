@@ -1,0 +1,39 @@
+# 端口配置
+server:
+        port: 8080
+
+# 数据源
+spring:
+        datasource:
+                druid:
+                        username: root
+                        password: 123456
+                        url: jdbc:mysql://localhost:3306/y-security?characterEncoding=UTF-8&serverTimezone=GMT%2B8
+
+# 关闭 templates 检查
+        freemarker:
+                check-template-location: false
+
+# thymeleaf
+# 不用缓存 实现页面热部署
+        thymeleaf:
+                cache: false
+# 语法不严格按照HTML5
+                mode: LEGACYHTML5
+
+# mybatis-plus 配置
+mybatis-plus:
+  mapper-locations: classpath:/mapper/*/*Mapper.xml
+  type-aliases-package: com.slightlee.*.pojo
+
+# redis 配置
+
+
+logging:
+        level:
+          com:
+           slightlee:
+               yadmin:
+                  sys:
+                     mapper: debug
+
